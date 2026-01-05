@@ -1,0 +1,181 @@
+// Quasar SCSS (& Sass) Variables
+$primary: #1976d2;
+$secondary: #26a69a;
+$accent: #9c27b0;
+
+$dark: #1d1d1d;
+$dark-page: #121212;
+
+$positive: #21ba45;
+$negative: #c10015;
+$info: #31ccec;
+$warning: #f2c037;
+
+//menu color light
+$ITEM_COLOR: #2c3e50;
+$ACTIVE_COLOR: #1976d2;
+$ACTIVE_BACKGROUND: #171ad310;
+
+//menu color dark
+$ITEM_COLOR_DARK: #2c3e50;
+$ACTIVE_COLOR_DARK: #d2d9e0;
+$ACTIVE_BACKGROUND_DARK: rgba(202, 207, 212, 0.062);
+
+@mixin clearfix {
+  display: inline-block;
+  &:after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+//默认flex布局
+@mixin flex($align: center, $justify: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+//多行省略号
+@mixin ellipsis-lines($row: 1) {
+  /* 显示两行，省略号 */
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $row;
+  line-clamp: $row;
+  -webkit-box-orient: vertical;
+}
+//单行，省略号
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+:root {
+  --background-color: transparent;
+  --background-color-dark: transparent;
+  --text-color: rgb(33, 118, 210);
+  --text-color-dark: rgb(204, 231, 255);
+  --border-color: transparent;
+  --border-color-dark: transparent;
+
+  --text-color-hover: rgb(33, 118, 210);
+  --text-color-hover-dark: rgb(204, 231, 255);
+  --background-color-hover: transparent;
+  --background-color-hover-dark: transparent;
+  --border-color-hover: transparent;
+  --border-color-hover-dark: transparent;
+
+  --text-color-active: rgb(33, 118, 210);
+  --text-color-active-dark: rgb(255, 255, 255);
+  --background-color-active: rgba(33, 118, 210, 0.08);
+  --background-color-active-dark: rgba(204, 231, 255, 0.4);
+  --border-color-active: transparent;
+  --border-color-active-dark: transparent;
+
+  // scrollbars
+  --markdown-scrollbar-width-height: 10px;
+  --markdown-scrollbar-track: #eeeeee;
+  --markdown-scrollbar-thumb: rgb(204, 231, 255);
+  --markdown-scrollbar-thumb-hover: rgb(33, 118, 210);
+  --markdown-scrollbar-track-dark: #eeeeee;
+  --markdown-scrollbar-thumb-dark: rgb(204, 231, 255);
+  --markdown-scrollbar-thumb-hover-dark: rgb(33, 118, 210);
+}
+
+.toc .q-item,
+.menu .q-item {
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  background: var(--background-color);
+  transition:
+    color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+    background 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),
+    border 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  font-size: 12px;
+}
+
+.toc .q-item.q-item--active,
+.toc .q-item.q-router-link--active,
+.menu .q-item.q-item--active,
+.menu .q-item.q-router-link--active {
+  border: 1px solid var(--border-color-active);
+  color: var(--text-color-active);
+  background: var(--background-color-active);
+  &:hover,
+  &:focus {
+    border: 1px solid var(--border-color-hover);
+    color: var(--text-color-hover);
+    background: var(--background-color-hover);
+  }
+
+  &:active {
+    border: 1px solid var(--border-color-active);
+    color: var(--text-color-active);
+    background: var(--background-color-active);
+  }
+}
+
+// make TOC work with hover colors
+.toc .q-item .q-item__section--side,
+.menu .q-item .q-item__section--side {
+  background: transparent;
+  color: inherit !important;
+}
+
+// 统一修改窗体样式
+.dragWindowPanel {
+  background: linear-gradient( #124564, #008EB9);
+  .dragPanelTitle {
+    background-image: url('/img/window/windowHeader.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height:43px !important;
+    line-height:43px !important;
+  }
+  .dragPanelContent {
+    background-color: transparent !important;
+    .cardContent
+    {
+      background: linear-gradient( to bottom, #2AF8FF26, #2AF8FFCC) !important;
+      margin-right:5px;
+    }
+  }
+
+
+
+  .bg-primary
+  {
+    background: linear-gradient( to top, #2AF8FF00, #2AF8FFFF) !important;
+  }
+  .q-table
+  {
+    /* 表头样式（单独定义，不参与隔行） */
+    thead tr {
+      background-color: #082C3D;
+    }
+    tbody
+    {
+      /* 偶数行样式 */
+      tr:nth-child(even) {
+           background-color: #082C3D ; 
+      }
+      /* 奇数行样式 */
+    tr:nth-child(odd) {
+      background-color: #30586480; 
+
+    }
+    } 
+
+  
+  }
+  .q-table__bottom
+  {
+     background-color: #082C3D ; 
+  }
+}

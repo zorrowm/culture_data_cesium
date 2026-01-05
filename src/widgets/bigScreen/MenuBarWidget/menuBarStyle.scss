@@ -1,0 +1,35 @@
+.currentChildMenu {
+  background-color: transparent;
+  .menuBarItem {
+    background-color: #ccc;
+    margin-right: 5px;
+  }
+}
+
+/* 地图菜单 */
+#linkMenuWidget {
+  position: absolute;
+  top: 0;
+  left: 60px;
+  width:150px;
+  // background-color: #5c7f85;
+  height: 30px;
+  z-index: 10;
+  .currentChildMenu {
+    flex-direction: row;
+    // width: 300px;
+    background-color: transparent;
+    cursor: pointer;
+    .menuBar {
+      background-color: transparent;
+    }
+    .menuBarItem {
+      background-color: transparent; //#014a6c;
+      width: 30px;
+      height: 30px;
+    }
+    .active {
+      background-color: #3deffc !important;
+    }
+  }
+}

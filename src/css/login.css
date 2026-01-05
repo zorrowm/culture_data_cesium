@@ -1,0 +1,153 @@
+  /* 用户登录界面 */
+.dc-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url('/img/login/background.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.login-logo {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+}
+.login-logo > img {
+  width: 30px;
+  margin-top: -15px;
+}
+.login-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: #cccccc;
+  letter-spacing: 2px;
+  margin-left:20px;
+}
+.login {
+  z-index: 2;
+  position: absolute;
+  width: 564px;
+  border-radius: 5px;
+  height: 400px;
+  /* background: white; */
+  background-image: url('/img/login/loginPanel.png');
+  background-size: 100% 100%;
+  box-shadow: 0px 0px 5px #333333;
+  top: 50%;
+  left: 50%;
+  margin-top: -180px;
+  margin-left: -282px;
+  transition: all 1s;
+  -moz-transition: all 1s;
+  /* Firefox 4 */
+  -webkit-transition: all 1s;
+  /* Safari 鍜� Chrome */
+  -o-transition: all 1s;
+  /* Opera */
+}
+.login-content
+{
+  margin-top: 112px;
+  padding-left: 150px;
+  /* background-color: #f00; */
+}
+
+.login-center {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40px;
+  margin-bottom: 30px;
+}
+.login-center-img {
+  width: 32px;
+  height: 40px;
+  line-height:40px;
+  font-size: 16px;
+  color:#fff;
+  float: left;
+}
+
+.login-center-input {
+  float: left;
+  width: 230px;
+  margin-left: 15px;
+  height: 30px;
+  position: relative;
+}
+.login-center-input input {
+  z-index: 2;
+  transition: all 0.5s;
+  padding-left: 10px;
+  color: #eee;
+  width: 100%;
+  height: 40px;
+  border: 0;
+  background-color: #002D40 ;
+  border-bottom: 1px solid #888;
+  border-top: 1px solid #004E6F;
+  border-left: 1px solid #004E6F;
+  border-right: 1px solid #004E6F;
+  box-sizing: border-box;
+  outline: none;
+  position: relative;
+}
+.login-center-input input:focus {
+  border: 1px solid dodgerblue;
+}
+.login-center-input-text {
+  background: #004E6F ;
+  padding: 0 5px;
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  height: 20px;
+  top: 50%;
+  margin-top: -10px;
+  font-size: 14px;
+  left: 5px;
+  color: dodgerblue;
+  line-height: 20px;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.5s;
+  /* Safari  Chrome */
+  -o-transition: all 0.5s;
+  /* Opera */
+}
+.login-center-input input:focus ~ .login-center-input-text {
+  top: 0;
+  z-index: 3;
+  opacity: 1;
+  margin-top: -15px;
+}
+.login.active {
+  -webkit-animation: login-small 0.8s;
+  animation: login-small 0.8s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+.login-button {
+  cursor: pointer;
+  width: 112px;
+  text-align: center;
+  height: 38px;
+  line-height: 38px;
+  /* background-color: dodgerblue; */
+  background-image: url('/img/login/loginBtn.png');
+  margin: 0 auto;
+  margin-top:50px;
+  color: white;
+}
+.login-copyright
+{
+  position:absolute;
+  left:0;
+  bottom: 5px;
+  width:100%;
+  z-index: 10;
+  text-align: center;
+  color:#fff;
+  font-size:14px;
+}
+  

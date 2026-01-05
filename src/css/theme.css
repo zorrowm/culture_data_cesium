@@ -1,0 +1,96 @@
+/* 引入字体文件 */
+/* @font-face {
+  font-family: 'PangMenZhengDao';
+  src: url('../assets/PangMenZhengDao.woff2');
+} */
+#q-app {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+  font-family: 'Microsoft YaHei', 'Source Han Sans CN', sans-serif;
+  font-size: 16px;
+}
+
+.dc-page-container {
+  width: 100%;
+  position: relative;
+}
+
+/*******************——多主题样式定义——***********************************/
+/*  浅色主题 */
+.body--light {
+  /* Iconify符号颜色 */
+  --iconify-color: #fff;
+
+  /* 头部背景色 */
+  --header-bg-color: #222;
+
+  /* 主内容区背景色 */
+  --main-bg-color: #ccc;
+
+  /* ******************* 左侧菜单************* */
+  --sider-panel-bg-color: #273352;
+
+  /* 菜单主背景颜色 */
+  --sider-menu-bg-color: #273352;
+
+  /* 菜单字体颜色 */
+  --sider-menu-font-color: #222;
+
+  /* 选中菜单背景颜色，默认为 #e6f7ff; */
+  --sider-menu-selected-bgcolor: #e6f7ff;
+
+  /* 选中菜单字颜色，默认为 #1890ff; */
+  --sider-menu-selected-fontcolor: #1890ff;
+
+  /* 底部状态栏颜色 */
+  --footer-bg-color: #eee;
+  --footer-copyright-fontcolor: #000;
+  --footer-info-fontcolor: #00f;
+
+  /* 整体字的颜色 */
+  --text-color: #000;
+}
+
+/* 深色主题背景 */
+.body--dark {
+  /* //Iconify符号颜色 */
+  --iconify-color: #fff;
+  /* 头部背景色 */
+  --header-bg-color: #f6f7f8;
+  /*  主内容区背景色 */
+  --main-bg-color: #333;
+
+  /* ******************* 左侧菜单************* */
+  --sider-panel-bg-color: #eee;
+  /* 菜单主背景颜色 */
+  --sider-menu-bg-color: #eee;
+  /* 菜单字体颜色 */
+  --sider-menu-font-color: #fff;
+  /* 选中菜单背景颜色，默认为 #e6f7ff; */
+  --sider-menu-selected-bgcolor: #666;
+  /* 选中菜单字颜色，默认为 #1890ff; */
+  --sider-menu-selected-fontcolor: #1890ff;
+
+  /* 底部状态栏颜色 */
+  --footer-bg-color: #eee;
+  --footer-copyright-fontcolor: #fff;
+  --footer-info-fontcolor: #00f;
+
+  /* 整体字的颜色 */
+  --text-color: #fff;
+}
+
+/* iconify Icon图标样式 */
+.iconify {
+  width: 18px;
+  height: 18px;
+  /* 图片文字的基线对齐，必须要有 */
+  vertical-align: middle;
+  /* color: var(--iconify-color); */
+  color: white !important;
+}
