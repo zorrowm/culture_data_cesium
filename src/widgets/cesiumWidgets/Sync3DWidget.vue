@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted } from 'vue';
 import { Global } from 'xframelib';
-import { MouseEventType,XViewer } from 'xgis-cesium';
+import { MouseEventType,SceneEventType,XViewer } from 'xgis-cesium';
 
 let viewer: XViewer;
 let syncViewer: XViewer;
@@ -18,6 +18,7 @@ function closeO() {
         if (syncViewer ) {
             syncViewer.off(MouseEventType.WHEEL, liandong2D3D);
             syncViewer.off(MouseEventType.LEFT_UP, liandong2D3D);
+            syncViewer.off(SceneEventType.CAMERA_CHANGED, liandong2D3D);
         }
     } catch (error) { 
                 console.log('close0异常',error)
@@ -26,6 +27,7 @@ function closeO() {
         if (viewer) {
             viewer.off(MouseEventType.WHEEL, liandong3D2D);
             viewer.off(MouseEventType.LEFT_UP, liandong3D2D);
+            viewer.off(SceneEventType.CAMERA_CHANGED, liandong3D2D);
         }
     } catch (error) {
         console.log('close0异常',error)
@@ -38,6 +40,7 @@ function open3d() {
     if (viewer) {
         viewer.on(MouseEventType.WHEEL, liandong3D2D);
         viewer.on(MouseEventType.LEFT_UP, liandong3D2D);
+        viewer.on(SceneEventType.CAMERA_CHANGED, liandong3D2D);
     }
 }
 
@@ -45,10 +48,10 @@ function open3d() {
 function open2d() {
     closeO()
     if (syncViewer) {
-        // syncViewer.on('moveend', liandong2D3D);
-        // syncViewer.on('zoomend', liandong2D3D);
         syncViewer.on(MouseEventType.WHEEL, liandong2D3D);
         syncViewer.on(MouseEventType.LEFT_UP, liandong2D3D);
+        syncViewer.on(SceneEventType.CAMERA_CHANGED, liandong2D3D);
+        
     }
 }
 // 3d联动2d
